@@ -1,0 +1,182 @@
+[
+  {
+    "playerName": "Virat Kohli",
+    "PlayerImage": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Virat_Kohli_June_2016_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "origin": "India",
+    "uniqueKey": "ply_101",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm medium",
+    "price": "$690000"
+  },
+  {
+    "playerName": "MS Dhoni",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/MS_Dhoni.jpg",
+    "origin": "India",
+    "uniqueKey": "ply_102",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm medium",
+    "price": "$500000"
+  },
+  {
+    "playerName": "Rohit Sharma",
+    "PlayerImage": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "origin": "India",
+    "uniqueKey": "ply_103",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm offbreak",
+    "price": "$600000"
+  },
+  {
+    "playerName": "Babar Azam",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Babar_azam_2023.jpg",
+    "origin": "Pakistan",
+    "uniqueKey": "ply_104",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm offbreak",
+    "price": "$150000"
+  },
+  {
+    "playerName": "Kane Williamson",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kane_Williamson.jpg",
+    "origin": "New Zealand",
+    "uniqueKey": "ply_105",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm offbreak",
+    "price": "$140000"
+  },
+  {
+    "playerName": "Steve Smith",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/SPDSmith.png",
+    "origin": "Australia",
+    "uniqueKey": "ply_106",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm legbreak",
+    "price": "$145000"
+  },
+  {
+    "playerName": "Joe Root",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Joe_root.jpg",
+    "origin": "England",
+    "uniqueKey": "ply_107",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm offbreak",
+    "price": "$135000"
+  },
+  {
+    "playerName": "Pat Cummins",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Pat_Cummins_fielding_Ashes_2021_(cropped).jpg",
+    "origin": "Australia",
+    "uniqueKey": "ply_108",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm fast",
+    "price": "$205000"
+  },
+  {
+    "playerName": "Mitchell Starc",
+    "PlayerImage": "https://upload.wikimedia.org/wikipedia/commons/6/6a/MITCHELL_STARC_%286310554649%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "origin": "Australia",
+    "uniqueKey": "ply_109",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "Left-arm fast",
+    "price": "$247000"
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasprit_Bumrah.jpg",
+    "origin": "India",
+    "uniqueKey": "ply_110",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm fast",
+    "price": "$120000"
+  },
+  {
+    "playerName": "Rashid Khan",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rashid_Khan.jpg",
+    "origin": "Afghanistan",
+    "uniqueKey": "ply_111",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm legbreak",
+    "price": "$150000"
+  },
+  {
+    "playerName": "Shakib Al Hasan",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Shakib_Al_Hasan_(7).jpg",
+    "origin": "Bangladesh",
+    "uniqueKey": "ply_112",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "Slow left-arm orthodox",
+    "price": "$100000"
+  },
+  {
+    "playerName": "Ben Stokes",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/BEN_STOKES_(11704837023).jpg",
+    "origin": "England",
+    "uniqueKey": "ply_113",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "Right-arm fast-medium",
+    "price": "$162000"
+  },
+  {
+    "playerName": "Hardik Pandya",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Hardik_Pandya_2020.jpg",
+    "origin": "India",
+    "uniqueKey": "ply_114",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm fast-medium",
+    "price": "$150000"
+  },
+  {
+    "playerName": "Kagiso Rabada",
+    "PlayerImage": "https://upload.wikimedia.org/wikipedia/commons/7/7d/KAGISO_RABADA_%2815519760378%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "origin": "South Africa",
+    "uniqueKey": "ply_115",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "Right-arm fast",
+    "price": "$92000"
+  },
+  {
+    "playerName": "Trent Boult",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Trent_Boult.jpg",
+    "origin": "New Zealand",
+    "uniqueKey": "ply_116",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Left-arm fast-medium",
+    "price": "$80000"
+  },
+  {
+    "playerName": "Glenn Maxwell",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Glenn_Maxwell.jpg",
+    "origin": "Australia",
+    "uniqueKey": "ply_117",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm offbreak",
+    "price": "$110000"
+  },
+  {
+    "playerName": "David Warner",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Warner.jpg",
+    "origin": "Australia",
+    "uniqueKey": "ply_118",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "Right-arm legbreak",
+    "price": "$62000"
+  },
+  {
+    "playerName": "Quinton de Kock",
+    "PlayerImage": "https://upload.wikimedia.org/wikipedia/commons/6/67/QUINTON_DE_KOCK_%2815681398316%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "origin": "South Africa",
+    "uniqueKey": "ply_119",
+    "battingStyle": "Left-hand bat",
+    "bollingStyle": "None (Wicketkeeper)",
+    "price": "$67000"
+  },
+  {
+    "playerName": "Suryakumar Yadav",
+    "PlayerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Suryakumar_Yadav_(1).jpg",
+    "origin": "India",
+    "uniqueKey": "ply_120",
+    "battingStyle": "Right-hand bat",
+    "bollingStyle": "Right-arm medium",
+    "price": "$80000"
+  }
+]
