@@ -12,10 +12,10 @@ const Hero = ({ balance, setBalance }: HeroProps) => {
   const [claimed, setClaimed] = useState(false);
 
   const handleClaimCredit = () => {
-    setBalance(balance + 600000);
+    setBalance(balance + 1000000);
     setClaimed(true);
 
-    toast.success("600,000 Free Credit Claimed!");
+    toast.success("1,000,000 Free Credit Claimed!");
   };
 
   return (

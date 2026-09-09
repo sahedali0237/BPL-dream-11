@@ -15,6 +15,8 @@ const playersPromise = playersFetch();
 
 function App() {
   const [balance, setBalance] = useState<number>(1000000);
+  const [purchasedPlayers, setPurchasedPlayers] =
+  useState<PlayerType[]>([]);
 
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
           playersPromise={playersPromise}
           balance={balance}
           setBalance={setBalance}
+          purchasedPlayers={purchasedPlayers}
+          setPurchasedPlayers={setPurchasedPlayers}
         />
       </Suspense>
     </>

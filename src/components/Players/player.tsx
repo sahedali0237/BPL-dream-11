@@ -1,14 +1,23 @@
 import { use, useState, type Dispatch, type SetStateAction } from "react";
 import type { PlayerType } from "../../types/type";
 import AvailablePlayers from "./availablePlayers";
+import SelectedPlayers from "./selectedPlayers";
 
 type PlayerProps = {
   playersPromise: Promise<PlayerType[]>;
   balance: number;
   setBalance: Dispatch<SetStateAction<number>>;
+  purchasedPlayers: PlayerType[];
+  setPurchasedPlayers: Dispatch<SetStateAction<PlayerType[]>>;
 };
 
-const Player = ({ playersPromise, balance, setBalance }: PlayerProps) => {
+const Player = ({
+  playersPromise,
+  balance,
+  setBalance,
+  purchasedPlayers,
+  setPurchasedPlayers,
+}: PlayerProps) => {
   const players = use(playersPromise);
 
   const [buttonType, setButtonType] = useState<"available" | "selected">(
@@ -24,7 +33,11 @@ const Player = ({ playersPromise, balance, setBalance }: PlayerProps) => {
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-            {buttonType === "available"? "All Available Players": "All Selected Players"}
+            {buttonType === "available"
+              ? "All Available Players"
+              : purchasedPlayers.length > 0
+                ? `All Selected Players (${purchasedPlayers.length}/11)`
+                : "No Selected Yet...!"}
           </h1>
 
           <p className="mt-1 text-sm text-gray-500">
@@ -65,9 +78,16 @@ const Player = ({ playersPromise, balance, setBalance }: PlayerProps) => {
             player={players}
             balance={balance}
             setBalance={setBalance}
+            purchasedPlayers={purchasedPlayers}
+            setPurchasedPlayers={setPurchasedPlayers}
           />
         ) : (
-          "selected"
+          <SelectedPlayers
+            balance={balance}
+            setBalance={setBalance}
+            purchasedPlayers={purchasedPlayers}
+            setPurchasedPlayers={setPurchasedPlayers}
+          />
         )}
       </div>
     </div>

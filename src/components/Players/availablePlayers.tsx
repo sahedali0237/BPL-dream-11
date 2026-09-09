@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import type { PlayerType } from "../../types/type";
 import { FaUser, FaFlag } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -7,42 +7,40 @@ type AvailablePlayerProps = {
   player: PlayerType[];
   balance: number;
   setBalance: Dispatch<SetStateAction<number>>;
+  purchasedPlayers: PlayerType[];
+  setPurchasedPlayers: Dispatch<SetStateAction<PlayerType[]>>;
 };
 
 const AvailablePlayers = ({
   player,
   balance,
   setBalance,
+  purchasedPlayers,
+  setPurchasedPlayers,
 }: AvailablePlayerProps) => {
-  const [selectedPlayers, setSelectedPlayers] = useState<(string | number)[]>(
-    [],
-  );
-
+  
   // CHANGE 1: receive the selected player
   const handleSelectPlayer = (selectedPlayer: PlayerType) => {
-  const playerPrice = Number(
-    String(selectedPlayer.price).replace("$", "").replace(/,/g, ""),
-  );
+    if (purchasedPlayers.length >= 11) {
+      toast.error("Maximum limit reached! You can only select 11 players.");
+      return; // Stop the function here so they don't get charged
+    }
+    const playerPrice = Number(
+      String(selectedPlayer.price).replace("$", "").replace(/,/g, ""),
+    );
 
-  const newPlayerPrice = balance - playerPrice;
+    const newPlayerPrice = balance - playerPrice;
 
-  if (newPlayerPrice >= 0) {
-    setBalance(newPlayerPrice);
+    if (newPlayerPrice >= 0) {
+      setBalance(newPlayerPrice);
 
-    setSelectedPlayers((prevSelected) => {
-      // Prevent selecting the same player twice
-      if (prevSelected.includes(selectedPlayer.uniqueKey)) {
-        return prevSelected;
-      }
+      setPurchasedPlayers((prev) => [...prev, selectedPlayer]);
 
-      return [...prevSelected, selectedPlayer.uniqueKey];
-    });
-
-    toast.success(`${selectedPlayer.playerName} purchased successfully!`);
-  } else {
-    toast.error("Insufficient Balance");
-  }
-};
+      toast.success(`${selectedPlayer.playerName} purchased successfully!`);
+    } else {
+      toast.error("Insufficient Balance");
+    }
+  };
 
   if (!player || player.length === 0) {
     return <div className="text-center p-10">No players available.</div>;
@@ -65,20 +63,21 @@ const AvailablePlayers = ({
           // CHANGE 3: use uniqueKey directly
           const cardKey = uniqueKey;
 
-          // Check whether this player is selected
-          const isSelected = selectedPlayers.includes(cardKey);
+          // Dynamically check whether this player is in the global purchased array
+          const isSelected = purchasedPlayers.some(
+            (purchasedPlayer) => purchasedPlayer.uniqueKey === cardKey
+          );
 
           return (
             <div
               key={cardKey}
-              className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col"
+              className="bg-white border border-gray-200 rounded-xl shadow-md  overflow-hidden flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-gray-300"
             >
               <div className="h-64 w-full bg-gray-100 overflow-hidden">
                 <img
                   src={PlayerImage}
                   alt={playerName}
                   className="w-full h-full object-cover object-top"
-                  loading="lazy"
                 />
               </div>
 
@@ -116,7 +115,7 @@ const AvailablePlayers = ({
                   </div>
                 </div>
 
-                <button 
+                <button
                   type="button"
                   onClick={() => handleSelectPlayer(p)}
                   className={`w-full font-semibold py-2.5 px-4 rounded-lg transition-colors duration-300 ${
