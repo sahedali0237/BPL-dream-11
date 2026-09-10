@@ -4,6 +4,7 @@ import Player from "./components/Players/player";
 import type { PlayerType } from "./types/type";
 import Navbar from "./components/nav";
 import Hero from "./components/hero";
+import Footer from "./components/footer";
 
 const playersFetch = async (): Promise<PlayerType[]> => {
   const res = await fetch("/playerData.json");
@@ -32,6 +33,8 @@ function App() {
           setPurchasedPlayers={setPurchasedPlayers}
         />
       </Suspense>
+
+      <Footer/>
     </>
   );
 }
